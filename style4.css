@@ -311,7 +311,7 @@
 .icons span a:hover{
 	color: orange;
 }
-
+/* --------------------------------reponsive------------------- */
 /*---------------------------------for mobile*/
 @media (max-width: 670px){
 	.container .deep .conten{
