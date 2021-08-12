@@ -1,0 +1,365 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	width: auto;
+	height: auto;
+	scroll-behavior: smooth;
+}
+.header{
+	width: 100%;
+	position: fixed;
+	transition: 0.5s;
+	z-index: 2;
+}
+.header nav{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.nav__pc nav .logo{
+	flex: 0;
+	width: 10%;
+}
+.nav__pc nav .menu{
+	width: 100%;
+	height: auto;
+	display: flex;
+	margin-right: auto !important;
+}
+.nav__pc nav .menu ul {
+	flex: 2;
+	display: flex;
+	text-align: center;
+}
+.nav__pc nav .menu ul li{
+	flex-grow: 1;
+	margin: auto 0;
+	display: inline-block;
+
+}
+.nav__pc nav .menu form {
+	flex: 1;
+	margin: auto 0;
+	text-align: center;
+}
+.nav__pc nav .menu form input{
+	border: orange solid .5px;
+	height: 30px;
+	width: 60%;
+	border-radius: 17px;
+	transition: all 0.3s;
+}
+.nav__pc nav .menu form input:hover{
+	background: orange;
+}
+.black{
+	background: #333333;
+}
+.menu li a{
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.4s;
+	font-weight: bold;
+	color: orange;
+}
+.menu li a:hover{
+	color: royalblue;
+}
+.nav__overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: none;
+	animation: fadeIn linear 0.3s;
+}
+.nav__mobile{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 310px;
+	max-width: 100%;
+	background-color: #fff;
+	transform: translateX(100%);
+	opacity: 0;
+	transition: all linear 0.2s;
+}
+.nav__bars-btn{
+	color: orange;
+	position: relative                                                                                                                          ;
+	margin-top: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+	display: none;
+}
+.nav__mobile .nav__mobile-close{
+	text-align: right;
+	display: block;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	color: orange;
+}
+.nav__mobile li{
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.nav__mobile li a{
+	text-decoration: none;
+	display: block;
+	padding: 8px 0;
+	color: black;		
+	transition: all 0.3s;
+}
+.nav__mobile li a:hover{
+	color: orange;
+	font-size: 17px;
+}
+.nav__mobile li input{
+	height: 30px;
+	width: 250px;
+	border-radius: 16px;
+	outline: none;
+	border: none;
+	background-color: lightgray;
+	transition: all 0.3s;
+}
+.nav__mobile li input:hover{
+	height: 32px;
+	width: 253px;
+	background: orange;
+}
+.container .content li{
+	list-style-type: none;
+}
+
+.nav__input:checked ~ .nav__overlay{
+	display: block;
+}
+.nav__input:checked ~ .nav__mobile{
+	transform: translateX(0%);
+	opacity: 1;
+}
+/*---------------------------------------=====-body*/
+
+.container{
+	display: flex;
+	height: 100%;
+	width: auto;
+	padding-bottom: 150px;
+	padding-top: 70px;
+	position: relative;
+	z-index: 1;
+}
+.container .content{
+	width: 70%;
+	text-align: center;
+}
+.content li{
+	width: 100%;
+	height: a;
+}
+.content li button{
+	cursor: pointer;
+	margin-bottom: 20px;
+	width: 85%;
+	text-align: center;
+}
+.deep{
+	display: flex;
+	flex-wrap: wrap;
+}
+.deep .title{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+}
+.deep .conten{
+	height: 58px;
+	margin-top: 16px;
+	text-align: left;
+	-webkit-line-clamp: 3;
+ 	-webkit-box-orient: vertical;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+.deep .date{
+	flex: 1;
+	font-weight: bold;
+	text-align: right;
+}
+.container .sidebar{
+	width: 25%;
+	background: lightgray;
+	height: 100%;
+	padding-bottom: 20px;
+  	position: sticky;
+  	position: -webkit-sticky;
+  	top: 50px;
+  	z-index: -1;
+}
+.sidebar ul{
+	margin: 0 auto;
+	width: 75%;
+	display: flex;
+	border: #333 solid 3px;
+	margin-bottom: 20px;
+	transition: 0.4s;
+	background: #FFFAFA;
+}
+.sidebar ul div{
+	margin: 5px;
+}
+.sidebar ul div a{
+	color: black;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	text-decoration: none;
+	transition: 0.3s;
+}
+.sidebar ul:hover{
+	background: #FFD68A;
+}
+/*--------------------------------footer*/
+#pagenum_fth{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+.pagenum{
+	margin-bottom: 40px;
+	height: 80%;
+	width: auto;
+	text-align: center;
+}
+.pagenum a{
+	margin: 2px;
+	border: solid 1.4px;
+	outline: none;
+	border-radius: 6px;
+	text-decoration: none;
+	padding: 10px;
+	color: black;
+	transition: all 0.3s;
+}
+.pagenum a:hover{
+	border: none;
+	padding: 13px;
+	color: white;
+	background: orange;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:orange;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+#myBtn:hover {
+  background-color: #333;
+  color: orange;
+}
+.footer{
+	width: 100%;
+	height: 50px;
+	background-color: #333;
+	display: flex;
+}
+.footer .info{
+	font-size: 12px;
+	text-align: left;
+	color: white;
+	margin-left: 40px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 70%;
+}
+.footer .icons{
+	width: 30%;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 30px;
+}
+.icons span a{
+	color: white;
+	transition: 0.2s;
+}
+.icons span a:hover{
+	color: orange;
+}
+
+/*---------------------------------for mobile*/
+@media (max-width: 670px){
+	.container .deep .conten{
+		display: none;
+	}
+	.content li button{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+/*---------------------------------for tablet*/
+@media (max-width: 768px){
+	.nav__bars-btn{
+		display: block;
+		margin-right: 20px;
+	}
+	.header{
+		height: 45px;
+	}
+	.nav__pc nav .logo{
+		height: 45px;
+		width: auto;
+	}
+	.nav__pc nav .menu{
+		display: none;
+	}
+	.nav__mobile nav{
+		display: block;
+	}
+	.container{
+		flex-direction: column;
+	}
+	.container .content{
+		width: 100%;
+	}
+	.container .sidebar{
+		width: 100%;
+	}
+	
+
+}
+/*----------------------------------@keyframes*/
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
